@@ -20,17 +20,8 @@ use App\Http\Controllers\ControllerSiswa;
 Route::get('/', [ControllerLogin::class, "LoginForm"])->name('login');
 Route::post('/', [ControllerLogin::class, "login"]);
 
-// Route::middleware(['role:guru'])->group(function () {
-//     Route::middleware(['roleguru'])->group(function () {
-//     });
-// });
-
-Route::middleware(['role:admin'])->group(function () {
-    Route::get('/admin',[ControllerAdmin::class, "index"]);
-});
+Route::get('/admin',[ControllerAdmin::class, "index"]);
 
 Route::get('/guru',[ControllerGuru::class, "index"]);
 
-Route::middleware(['role:siswa'])->group(function () {
-    Route::get('/siswa',[ControllerSiswa::class, "index"]);
-});
+Route::get('/siswa',[ControllerSiswa::class, "index"])->name('siswa.index');

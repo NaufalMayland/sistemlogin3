@@ -10,7 +10,7 @@ class Admin extends Model
     use HasFactory;
     protected $table = "admin";
     protected $fillable = [
-        'nama',
+        'nama'
     ];
 
     // public function user()
