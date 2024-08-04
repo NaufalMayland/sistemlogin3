@@ -21,11 +21,11 @@ class Guru extends Model
 
     public function kelas()
     {
-        return $this->hasOne(Kelas::class);
+        return $this->hasMany(Kelas::class, 'id_guru', 'nip');
     }
 
     public function mapel()
     {
-        return $this->hasOne(Mapel::class);
+        return $this->hasMany(Mapel::class, 'id_guru', 'nip');
     }
 }

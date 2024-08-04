@@ -3,6 +3,7 @@
         <nav class="flex items-center justify-end bg-white py-3 px-4 text-blue drop-shadow-md h-16">
             <div class="items-center  grid text-right">
                 <span class="text-xl font-bold">{{$guru->nama}}</span>
+                <span class="text-xs font-light">{{$guru->nip}}</span>
             </div>
         </nav>
     </div>

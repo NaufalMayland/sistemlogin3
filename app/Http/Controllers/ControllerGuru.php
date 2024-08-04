@@ -15,8 +15,11 @@ class ControllerGuru extends Controller
 
         $guruwali = Kelas::where('id_guru', $guru->nip)->exists();
         $gurumapel = Mapel::where('id_guru', $guru->nip)->exists();
+        $kelas = $guru->kelas;
+        $mapel = $guru->mapel;
+        // dd($kelas)
 
-        return view('guru.index')->with(compact('guru', 'guruwali', 'gurumapel'));    
+        return view('guru.index')->with(compact('guru', 'guruwali', 'gurumapel', 'kelas', 'mapel'));    
     }
 }
 
