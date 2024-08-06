@@ -2,7 +2,7 @@
 @section('content')
     {{-- <h1>ini {{$guru->nama}}</h1> --}}
     <div class="w-full my-4 space-y-4 bg-white border-gray-200 rounded-md shadow p-7">
-        <div class="bg-blue-700 p-2 rounded-full w-full">
+        <div class="bg-[#213555] p-2 rounded-full w-full">
             <h2 class="text-lg font-bold text-white text-center">Mata Pelajaran yang diampu di Tahun Pelajaran 2023/2024 Ganjil</h2>
         </div>
         <table class="w-full">
@@ -40,12 +40,12 @@
             </tbody>
         </table>
     </div>
-    @foreach($mapel as $mpl)
+    {{-- @foreach($mapel as $mpl)
         <p>anda guru mata pelajaran <span>{{ $mpl->nama_mapel }}</span></p>
-    @endforeach
+    @endforeach --}}
     @foreach($kelas as $kls)
         <div class="w-full my-5 space-y-4 bg-white border-gray-200 rounded-md shadow p-7">
-            <div class="bg-blue-700 p-2 rounded-full w-full">
+            <div class="bg-[#213555] p-2 rounded-full w-full">
                 <h2 class="text-lg font-bold text-white text-center">Anda adalah Wali Kelas Rombongan Belajar <span>{{ $kls->nama_kelas }}</span></h2>
             </div>
             <div class="mt-4">
